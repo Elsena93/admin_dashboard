@@ -1,7 +1,21 @@
+:root {
+    --light: #ecfccb;
+    --medium: #bef264;
+    --dark: #84cc16;
+    --darker: #4d7c0f;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-Regular.ttf");
+}
+
 body {
-    border-style: solid;
+    font-family: 'Roboto';
+    
+    /* border-style: solid;
     border-color: red;
-    border-width: 0.5px;
+    border-width: 0.5px; */
 
     padding: 0;
     margin: 0;
@@ -12,23 +26,29 @@ body {
     grid-template-rows: 1.5fr 5fr;
     grid-template-areas: "nav header"
     "nav main";
-
-    font-family: sans-serif;
 }
 
 p {
     margin: 0;
 }
 
+p.placeholder {
+    background-image: url("placeholder.png");
+    background-size: contain;
+    border: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
 
 header {
     grid-area: header;
-    background-color: aquamarine;
+    background-color: var(--light);
     min-height: 250px;
 
-    border-style: solid;
+    /* border-style: solid;
     border-color: red;
-    border-width: 0.5px;
+    border-width: 0.5px; */
 
     box-sizing: border-box;
     display: grid;
@@ -97,13 +117,13 @@ header .placeholder {
 
 nav {
     grid-area: nav;
-    background-color: blue;
+    background-color: var(--darker);
     min-width: 300px;
     box-sizing: border-box;
 
-    border-style: solid;
+    /* border-style: solid;
     border-color: red;
-    border-width: 0.5px;
+    border-width: 0.5px; */
 
     padding-top: 30px;
     padding-left: 40px;
@@ -120,6 +140,7 @@ nav .placeholder {
     height: 45px;
     overflow: hidden;
     border-style: solid;
+    background-size: contain;
 }
 
 nav > div > div {
@@ -132,9 +153,9 @@ nav > div > div {
 main {
     grid-area: main;
 
-    border-style: solid;
+    /* border-style: solid;
     border-color: red;
-    border-width: 0.5px;
+    border-width: 0.5px; */
 
     box-sizing: border-box;
 
@@ -143,35 +164,35 @@ main {
 }
 
 .projects-container {
-    border-style: solid;
+    /* border-style: solid;
     border-color: red;
-    border-width: 0.5px;
-    background-color: gray;
+    border-width: 0.5px; */
+    background-color: var(--medium);
 
     padding: 32px;
 
 }
 
 .projects {
-    border-style: solid;
+    /* border-style: solid;
     border-color: red;
-    border-width: 0.5px;
+    border-width: 0.5px; */
 
 }
 
 main > div:last-child {
-    border-style: solid;
+    /* border-style: solid;
     border-color: red;
-    border-width: 0.5px;
+    border-width: 0.5px; */
 
     display: flex;
     flex-direction: column;
 }
 
 main > div:last-child > * {
-    border-style: solid;
+    /* border-style: solid;
     border-color: red;
-    border-width: 0.5px;
+    border-width: 0.5px; */
 
     flex: 1;
     box-sizing: border-box;
@@ -211,9 +232,13 @@ main p {
 
 .project {
     padding: 16px;
-    background-color: white;
+    background-color: var(--dark);
     box-sizing: border-box;
     border-radius: 16px;
+
+    border-left-style: solid;
+    border-left-width: 16px;
+    border-left-color: var(--darker);
 }
 
 .project .title {
@@ -227,6 +252,8 @@ main p {
 .side-container {
     display: flex;
     flex-direction: column;
+
+    background-color: var(--medium);
 }
 
 .side-container > * {
@@ -238,9 +265,15 @@ main p {
     flex-direction: column;
 }
 
+.announcements {
+
+    padding: 16px;
+    background-color: var(--dark    );
+    border-radius: 16px;
+}
+
 .announcements > * {
-    padding-top: 16px;
-    padding-bottom: 16px;
+
 }
 
 .announcements .title {
@@ -262,7 +295,9 @@ main p {
 
     gap: 16px;
 
-    padding-top: 16px;
+    padding: 16px;
+    background-color: var(--dark);
+    border-radius: 16px;
 }
 
 .trending .placeholder {
@@ -286,4 +321,66 @@ main p {
 
 .trending p.sub {
     font-size: 1.5rem;
+}
+
+/* images */
+
+.logo.placeholder {
+    background-image: url(images/lemon.png);
+}
+
+.home.placeholder {
+    background-image: url(images/home.png);
+}
+
+.profile.placeholder {
+    background-image: url(images/card-account-mail-outline.png);
+}
+
+.messages.placeholder {
+    background-image: url(images/message.png);
+}
+
+.history.placeholder {
+    background-image: url(images/clock-outline.png);
+}
+
+.tasks.placeholder {
+    background-image: url(images/file-multiple-outline.png);
+}
+
+.communities.placeholder {
+    background-image: url(images/account-group.png);
+}
+
+.settings.placeholder {
+    background-image: url(images/cog.png);
+}
+
+.supports.placeholder {
+    background-image: url(images/help-circle.png);
+}
+
+.privacy.placeholder {
+    background-image: url(images/shield-check.png);
+}
+
+.search > p {
+    background-image: url(images/magnify.png);
+}
+
+.profile > p:first-child {
+    background-image: url(images/bell-outline.png);
+}
+
+.project > div > p:first-child {
+    background-image: url(images/star-plus-outline.png);
+}
+
+.project > div > p:nth-child(2) {
+    background-image: url(images/eye-plus-outline.png);
+}
+
+.project > div > p:last-child {
+    background-image: url(images/source-fork.png);
 }
