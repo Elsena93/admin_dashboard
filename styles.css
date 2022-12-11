@@ -23,8 +23,6 @@
 
     --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-    --small-round: 16px;
-    --big-round: 20px;
 
 }
 
@@ -39,8 +37,8 @@ body {
     margin: 0;
 
     display: grid;
-    grid-template-columns: 384px 5fr;
-    grid-template-rows: 256px 5fr;
+    grid-template-columns: 256px 5fr;
+    grid-template-rows: 128px 5fr;
     grid-template-areas: "nav header"
     "nav main";
 
@@ -63,7 +61,8 @@ p.placeholder {
 header {
     grid-area: header;
     background-color: var(--lighter-grey);
-    height: 256px;
+    height: 128px;
+    color: var(--black-grey);
     /* border-style: solid;
     border-color: red;
     border-width: 0.5px; */
@@ -75,11 +74,8 @@ header {
     grid-template-areas: "search profile"
     "user-info buttons";
 
-    padding-top: 48px;
-    padding-bottom: 48px;
-    padding-right: 48px;
-    padding-left: 48px;
-    font-size: 36px;
+    padding: 24px 24px 24px 24px;
+    font-size: 18px;
 }
 
 
@@ -87,13 +83,13 @@ header {
     grid-area: search;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 16px;
 }
 
 .search input {
-    width: 720px;
-    height: 45px;
-    border-radius: 30px;
+    width: 384px;
+    height: 24px;
+    border-radius: 16px;
 }
 
 
@@ -101,33 +97,33 @@ header {
     grid-area: profile;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 16px;
 }
 
 .user-info {
     grid-area: user-info;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 16px;
 }
 
 .user-info > div > p:first-child {
-    font-size: 24px;
+    font-size: 12px;
 }
 
 .buttons {
     grid-area: buttons;
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 16px;
 }
 
 button {
-    font-size: 30px;
+    font-size: 16px;
     font-weight: 600;
-    width: 192px;
-    height: 64px;
-    border-radius: 32px;
+    width: 96px;
+    height: 32px;
+    border-radius: 16px;
     font-family: inherit;
     color: var(--lightest-grey);
     background-color: var(--midhi-grey);
@@ -136,8 +132,8 @@ button {
 
 header .placeholder {
     color: yellow;
-    width: 45px;
-    height: 45px;
+    width: 24px;
+    height: 24px;
     overflow: hidden;
     border-style: solid;
 }
@@ -145,26 +141,26 @@ header .placeholder {
 nav {
     grid-area: nav;
     background-color: var(--lighter-grey);
-    width: 384px;
+    width: 192px;
     box-sizing: border-box;
 
     /* border-style: solid;
     border-color: red;
     border-width: 0.5px; */
 
-    padding-top: 48px;
-    padding-left: 48px;
+    padding-top: 24px;
+    padding-left: 24px;
 
     display: grid;
     grid-template-columns: 1fr;
     align-content: start;
-    gap: 64px;
+    gap: 32px;
 }
 
 nav .placeholder {
     color: aliceblue;
-    width: 32px;
-    height: 32px;
+    width: 16px;
+    height: 16px;
     overflow: hidden;
     border-style: solid;
     background-size: contain;
@@ -173,23 +169,23 @@ nav .placeholder {
 
 nav > div > div {
     display: flex;
-    gap: 24px;
-    font-size: 32px;
+    gap: 12px;
+    font-size: 16px;
     color: var(--dark-grey);
     align-items: center;
-    padding-bottom: 24px;
+    padding-bottom: 12px;
 }
 
 .logo div {
     display: flex;
     align-items: center;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 16px;
     color: var(--black-grey);
 }
 
 main {
-    padding: 24px;
+    padding: 12px;
     
     grid-area: main;
 
@@ -202,7 +198,7 @@ main {
     display: grid;
     grid-template-columns: 3fr 1fr;
 
-    border-radius: 48px;
+    border-radius: 24px;
     background-color: var(--lightest-grey);
     box-shadow: 0px 4px 8px -4px inset;
 
@@ -214,8 +210,8 @@ main {
     border-width: 0.5px; */
     background-color: var(--lightest-grey);
 
-    padding: 32px;
-    padding-top: 16px;
+    padding: 16px;
+    padding-top: 8px;
 
 }
 
@@ -247,65 +243,66 @@ main > div:last-child > * {
 }
 
 main > div:last-child > * {
-    padding: 16px;
+    padding: 8px;
     flex: 1;
 }
 
 main p {
-    font-size: 32px;
+    font-size: 16px;
 }
 
 h3 {
-    font-size: 36px;
+    font-size: 18px;
     color: var(--midhi-grey);
-    padding-bottom: 24px;
+    padding-bottom: 12px;
     margin: 0;
     font-weight: normal;
 }
 
 .projects {
     display: grid;
-    gap: 32px;
-    grid-template-columns: repeat(auto-fit, minmax(512px, 1fr));
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(192px, 1fr));
     grid-template-rows: repeat(2, 1fr);
 }
 
 .projects > div > div {
     display: flex;
     justify-content: flex-end;
-    gap: 32px;
+    gap: 16px;
 }
 
 .projects .placeholder {
     color: yellow;
-    width: 45px;
-    height: 45px;
+    width: 16px;
+    height: 16px;
     overflow: hidden;
     border-style: solid;
 }
 
 .project {
-    padding: 32px;
+    padding: 16px;
     background-color: var(--lighter-grey);
     box-sizing: border-box;
-    border-radius: 16px;
+    border-radius: 8px;
     box-shadow: 0px 8px 8px -4px;
 
     border-left-style: solid;
-    border-left-width: 16px;
-    border-left-color: var(--darker);
+    border-left-width: 8px;
+    border-left-color: var(--dark-grey);
+    color: var(--black-grey);
 }
 
 .project .title {
     font-weight: 600;
-    padding-bottom: 16px;
-    font-size: 36px;
+    padding-bottom: 8px;
+    font-size: 16px;
 }
 
 .project .content {
-    font-size: 24px;
-    padding-bottom: 16px;
-    line-height: 32px;
+    font-size: 12px;
+    padding-bottom: 8px;
+    line-height: 16px;
 }
 
 .side-container {
@@ -318,7 +315,7 @@ h3 {
 }
 
 .side-container h3 {
-    padding-bottom: 4px;
+    padding-bottom: 2px;
 }
 
 .announcements-container {
@@ -327,9 +324,10 @@ h3 {
 }
 
 .announcements {
-    padding: 4px;
-    border-radius: 16px;
+    padding: 2px;
+    border-radius: 8px;
     background-color: var(--lightest-grey);
+    color: var(--black-grey);
 }
 
 .announcements > * {
@@ -338,13 +336,13 @@ h3 {
 
 .announcements .title {
     font-weight: bold;
-    padding-bottom: 8px;
+    padding-bottom: 4px;
 }
 
 .announcements .content {
-    font-size: 24px;
-    padding-bottom: 16px;
-    line-height: 32px;
+    font-size: 12px;
+    padding-bottom: 8px;
+    line-height: 16px;
 }
 
 .trending-container {
@@ -356,17 +354,18 @@ h3 {
     display: flex;
     flex-direction: column;
 
-    gap: 16px;
+    gap: 8px;
 
-    padding: 4px;
+    padding: 2px;
     background-color: var(--lightest-grey);
-    border-radius: 16px;
+    color: var(--black-grey);
+    border-radius: 8px;
 }
 
 .trending .placeholder {
     color: yellow;
-    width: 45px;
-    height: 45px;
+    width: 16px;
+    height: 16px;
     overflow: hidden;
     border-style: solid;
 }
@@ -375,7 +374,7 @@ h3 {
     display: grid;
     grid-template-columns: 1fr 10fr;
     align-items: center;
-    gap: 16px;
+    gap: 8px;
 }
 
 .trending p.username {
@@ -383,18 +382,18 @@ h3 {
 }
 
 .trending p.sub {
-    font-size: 24px;
+    font-size: 12px;
 }
 
 /* images */
 
 nav img {
-    width: 32px;
+    width: 18px;
     filter: invert(30%);
 }
 
 .logo img {
-    width: 64px;
+    width: 32px;
     filter: invert(0%);
 }
 
