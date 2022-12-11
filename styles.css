@@ -80,7 +80,7 @@ header {
     padding-bottom: 48px;
     padding-right: 48px;
     padding-left: 48px;
-    font-size: 2rem;
+    font-size: 36px;
 }
 
 
@@ -113,7 +113,7 @@ header {
 }
 
 .user-info > div > p:first-child {
-    font-size: 1.5rem;
+    font-size: 24px;
 }
 
 .buttons {
@@ -384,7 +384,7 @@ h3 {
 }
 
 .trending p.sub {
-    font-size: 1.5rem;
+    font-size: 24px;
 }
 
 /* images */
