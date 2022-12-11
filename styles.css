@@ -75,7 +75,7 @@ header {
     "user-info buttons";
 
     padding: 24px 24px 24px 24px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 
@@ -252,7 +252,7 @@ main p {
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 16px;
     color: var(--midhi-grey);
     padding-bottom: 12px;
     margin: 0;
@@ -388,7 +388,7 @@ h3 {
 /* images */
 
 nav img {
-    width: 18px;
+    width: 16px;
     filter: invert(30%);
 }
 
